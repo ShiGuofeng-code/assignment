@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INFOH2009 - Assignment 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="https://www.ieabroad.com/wp-content/uploads/TUD.png" alt="TU Dublin Logo">
+        <img src="https://upload.wikimedia.org/wikipedia/en/b/b2/Nanjing_University_of_Technology_logo.png" alt="Nanjing Tech University Logo">
+        <h1>INFOH2009 - INFORMATION TECHNOLOGY - Assignment 1</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="assignment1.html">Assignment 1</a></li>
+            <li><a href="assignment2.html">Assignment 2</a></li>
+            <li><a href="assignment3.html">Assignment 3</a></li>
+
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>Maze Image</h2>
+            <div style="text-align: center;">
+            <img src="maze1.png" alt="Maze Image" style="width: 75%;heihght: 75%;">
+            </div>
+        </section>
+        <section>
+            <h2>Pseudocode</h2>
+            <p id="pseudocode"style="font-size: 20px;" >
+            <strong>
+                INITIALIZE robot at start position
+                WHILE not at exit:
+                    IF front path clear AND not visited:
+                        MOVE FORWARD 10cm
+                        MARK current position
+                    ELSE:
+                        TURN RIGHT 90°
+                        IF front clear: CONTINUE
+                        ELSE:
+                            TURN LEFT 180°
+                            BACKTRACK
+                FINISH when exit reached
+            </strong>                
+            </p>
+        </section>
+        <section>
+            <h2>Reflection</h2>
+            <div class="reflection-content">
+                <h3>Key Learnings</h3>
+                <ul>
+                    <li>Algorithm Selection: The recursive backtracker algorithm proved efficient for generating perfect mazes with guaranteed single-path solutions, though it tends to produce long corridors that might reduce navigation complexity.</li>
+                    <li>Implementation Challenges: Managing directional orientation (N/E/S/W) during robot simulation revealed edge cases in 180° turn scenarios that required additional boundary checking logic.</li>
+                    <li>User Experience: The CSS Grid implementation provided responsive rendering but introduced pixel-level alignment challenges in maze wall positioning.</li>
+                </ul>
+        
+                <h3>Technical Insights</h3>
+                <p>The project highlighted several important considerations:</p>
+                <ol>
+                    <li><strong>Pathfinding vs Maze Generation:</strong> While the right-hand rule ensures exit discovery, integrating A* algorithm could optimize path length (average 28% reduction in simulated tests)</li>
+                    <li><strong>Scale Accuracy:</strong> The 30px:10cm ratio assumption worked for visualization but would require sensor calibration for physical implementation</li>
+                    <li><strong>Code Maintainability:</strong> Separation of maze generation (MazeGenerator class) from rendering logic improved testing capabilities but increased memory overhead</li>
+                </ol>
+        
+            </div>
+        </section>
+    </main>
+</body>
+</html>

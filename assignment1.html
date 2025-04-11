@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INFOH2009 - Assignment 1</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --primary-blue: #1a365f;
+            --medical-red: #c8102e;
+            --neutral-gray: #4d4d4d;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.8;
+            color: var(--neutral-gray);
+        }
+
+        .header {
+            background: linear-gradient(rgba(26, 54, 95, 0.9), rgba(26, 54, 95, 0.9)),
+                        url('https://images.unsplash.com/photo-1579158870764-3b8f00636883?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            height: 80vh;
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .content-section {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin: 3rem 0;
+        }
+
+        .tech-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .tech-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .timeline {
+            border-left: 3px solid var(--primary-blue);
+            padding-left: 2rem;
+            margin: 3rem 0;
+        }
+
+        .timeline-item {
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -2.5rem;
+            top: 0;
+            width: 15px;
+            height: 15px;
+            background: var(--medical-red);
+            border-radius: 50%;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+        }
+
+        .comparison-table td, .comparison-table th {
+            border: 1px solid #ddd;
+            padding: 1rem;
+            text-align: left;
+        }
+
+        footer {
+            background: var(--primary-blue);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                height: 60vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://www.ieabroad.com/wp-content/uploads/TUD.png" alt="TU Dublin Logo">
+        <img src="https://upload.wikimedia.org/wikipedia/en/b/b2/Nanjing_University_of_Technology_logo.png" alt="Nanjing Tech University Logo">
+        <h1>INFOH2009 - INFORMATION TECHNOLOGY - Assignment 1</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="assignment1.html">Assignment 1</a></li>
+            <li><a href="assignment2.html">Assignment 2</a></li>
+            <li><a href="assignment3.html">Assignment 3</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2 style="font-size: 32px;">AI-Driven Surgical Robotics in Modern Medicine</h2>
+        </section>
+        <section aria-labelledby="application-image">
+            <img src="https://q6.itc.cn/q_70/images03/20240905/dfd5db7555ac4e2483665699ffcb71f3.png" 
+                 alt="Da Vinci Surgical System performing minimally invasive surgery">
+        </section>
+        <article>
+            <h2>Technological Breakthrough</h2>
+            <p>Modern surgical robots like the Da Vinci System integrate three core computer technologies:</p>
+            <ul>
+                <li><strong>Computer Vision:</strong> 3D stereoscopic imaging with 10x magnification</li>
+                <li><strong>Motion Scaling:</strong> Translating surgeon's hand movements into micro-scale motions</li>
+                <li><strong>Machine Learning:</strong> Predictive algorithms for anatomical pattern recognition</li>
+            </ul>
+            <br>
+            <p>According to a 2024 <em>New England Journal of Medicine</em> study, robotic-assisted procedures reduce:</p>
+            <ul>
+                <li>Hospital stays by 21% compared to traditional methods</li>
+                <li>Blood loss by 37% in prostatectomies</li>
+                <li>Post-op complications by 29%</li>
+            </ul>
+        </article>
+            <ul>
+                <br>
+                <h3>Reference</h3>
+                <li><a href="https://link.springer.com/article/10.1007/s11701-024-02205-0" target="_blank">Revolutionizing surgery: AI and robotics for precision, risk reduction, and innovation</a></li>
+                <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10907451/" target="_blank">Clinical applications of artificial intelligence in robotic surgery</a></li>
+            </ul>
+        <section class="content-section">
+            <h2>Technology Overview</h2>
+            <div class="grid-container">
+                <article class="tech-card">
+                    <img src="https://www.techcult.ru/content/2016/2987/hirurgicheskij-robto_4.jpg" alt="Surgical Robot" class="card-image">
+                    <div class="card-content">
+                        <h3>Robotic Surgical Systems</h3>
+                        <p>Modern systems like the da Vinci Surgical System integrate real-time imaging with millimeter-level precision control. AI algorithms enhance tremor filtration and motion scaling (5:1 ratio), enabling sub-millimeter accuracy impossible for human hands.</p>
+                    </div>
+                </article>
+    
+                <article class="tech-card">
+                    <img src="https://img0.baidu.com/it/u=3328651725,618150857&fm=253&fmt=auto&app=138&f=PNG?w=694&h=500" alt="AI Analysis" class="card-image">
+                    <div class="card-content">
+                        <h3>Machine Learning Applications</h3>
+                        <p>Deep learning models trained on >100,000 surgical videos can predict complications with 92% accuracy. Real-time tissue recognition systems analyze spectral signatures to differentiate between tissue types during procedures.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    
+        <section class="content-section">
+            <h2>Clinical Applications</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Cardiac Surgery</h3>
+                    <p>Robotic-assisted CABG procedures show 40% reduction in postoperative complications. AI-powered anastomosis guidance systems optimize suture placement based on vessel elasticity analysis.</p>
+                    <img src="https://www.gydey.cn/uploadfile/2020/1111/20201111030342644.jpg" alt="Cardiac Surgery" style="width: 100%; margin-top:1rem;">
+                </div>
+    
+                <div class="timeline-item">
+                    <h3>Neurosurgey</h3>
+                    <p>MRI-guided robotic systems achieve ±0.15mm positioning accuracy in deep brain stimulation. Machine learning algorithms process intraoperative neuromonitoring data to predict neural pathway integrity.</p>
+                    <img src="https://surgicalroboticslab.nl/wp-content/uploads/2018/02/moreira18-jmrr-fig.png" alt="MRI-guided robotic systems" style="width:100%; margin-top:1rem;">
+                </div>
+            </div>
+        </section>
+    
+        <section class="content-section">
+            <h2>Performance Comparison</h2>
+            <table class="comparison-table">
+                <tr>
+                    <th>Metric</th>
+                    <th>Traditional Surgery</th>
+                    <th>Robot-Assisted</th>
+                </tr>
+                <tr>
+                    <td>Procedure Time</td>
+                    <td>120-180 mins</td>
+                    <td>90-135 mins</td>
+                </tr>
+                <tr>
+                    <td>Blood Loss</td>
+                    <td>300-500ml</td>
+                    <td>50-150ml</td>
+                </tr>
+                <tr>
+                    <td>Recovery Time</td>
+                    <td>4-6 weeks</td>
+                    <td>2-3 weeks</td>
+                </tr>
+            </table>
+        </section>
+    
+        <section class="content-section">
+            <h2>Future Developments</h2>
+            <div class="grid-container">
+                <div class="tech-card">
+                    <img src="https://ts1.tc.mm.bing.net/th/id/R-C.256495726b734210b9a934bb216f1642?rik=NgM8TMWCHow%2bEA&riu=http%3a%2f%2fwenhui.whb.cn%2fu%2fcms%2fwww%2f201802%2f251832222omf.jpg&ehk=M2FrNyAJKmM07mCALUjYmR87Rd07%2fqPFqUbOaJiIiYo%3d&risl=&pid=ImgRaw&r=0" alt="Nanobots" class="card-image">
+                    <div class="card-content">
+                        <h3>Nanoscale Robotics</h3>
+                        <p>Experimental DNA-based nanobots (50nm diameter) demonstrate targeted drug delivery capabilities. Magnetic navigation systems enable precise control of microbot swarms within vasculature.</p>
+                    </div>
+                </div>
+                <div class="tech-card">
+                    <img src="https://bpb-us-e1.wpmucdn.com/sites.gatech.edu/dist/a/171/files/2021/07/FeedbackPoweredProsthesisMethod.png" alt="Haptic Interface" class="card-image">
+                    <div class="card-content">
+                        <h3>Haptic Feedback Systems</h3>
+                        <p>Next-generation force feedback systems replicate tissue resistance with 0.1N resolution. Multi-modal sensory integration combines pressure, temperature, and spectral data for enhanced surgeon awareness.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+</body>
+</html>
